@@ -1,0 +1,136 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "poppins", san-sari;
+      }
+      body {
+        background-color: white;
+      }
+      .card {
+        width: 90%;
+        max-width: 450px;
+        /* background-color: darkcyan; */
+        color: white;
+        background-color: #21d4fd;
+        background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+        border-radius: 20px;
+        padding: 40px 35px;
+        text-align: center;
+        margin: 100px auto 0px;
+      }
+      .search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .search input {
+        border: 0;
+        outline: 0;
+        background: #ebfffc;
+        color: #555;
+        padding: 10px 25px;
+        border-radius: 30px;
+        flex: 1;
+        margin-right: 16px;
+        font-size: 18px;
+      }
+      .search button {
+        border: 0;
+        outline: 0;
+        /* background: #ebfffc; */
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+      }
+      .search button img {
+        width: 12px;
+      }
+      .weather-icon {
+        width: 170px;
+        margin-top: 30px;
+      }
+      .weather h1 {
+        font-size: 80px;
+        font-weight: 500;
+      }
+      .weather h2 {
+        font-size: 45px;
+        font-weight: 400;
+        margin-top: -10px;
+      }
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+        margin-top: 50px;
+      }
+      .col {
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+      .col img {
+        width: 50px;
+        margin-right: 10px;
+      }
+      .humidity,
+      .wind {
+        font-size: 28px;
+        margin-top: -6px;
+      }
+      .weather {
+        display: none;
+      }
+      .error {
+        text-align: left;
+        margin-left: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Enter City name" spellcheck="false" />
+        <button><img src="./images/search.png" alt="" /></button>
+      </div>
+      <div class="error">
+        <p>Invalid City Name</p>
+      </div>
+      <div class="weather">
+        <img src="images/rain.png" alt="" class="weather-icon" />
+        <h1 class="temp">22</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" alt="" />
+            <div>
+              <p class="humidity">50</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/wind.png" alt="" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
